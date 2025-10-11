@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  height: 100dvh;
+}
+
+main {
+  display: flex;
+  width: 730px;
+  height: 280px;
+
+  section:nth-child(1) {
+    background-image: url("./images/drawers.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 280px;
+  }
+}
