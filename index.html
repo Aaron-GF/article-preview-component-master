@@ -14,7 +14,7 @@
 
     <title>Frontend Mentor | Article preview component</title>
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./assets/output.css" />
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,38 +24,53 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <main>
-      <section>
-        
-      </section>
-      <section>
-        <h2>
-          Shift the overall look and feel by adding these wonderful touches to
-          furniture in your home
+  <body className="min-h-screen bg-light-grayish-blue flex items-center justify-center p-6 font-manrope">
+    <main className="max-w-3xl bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+      <!-- Imagen -->
+      <div className="md:size-2/5 bg-cover bg-center" style="background-image: url('./images/drawers.jpg'); min-height: 200px;"></div>
+      
+      <!-- Contenido -->
+      <div className="p-8 md:size-3/5 relative">
+        <h2 className="text-xl font-bold text-very-dark-grayish-blue mb-4">
+          Shift the overall look and feel by adding these wonderful touches to furniture in your home
         </h2>
-        <p>
-          Ever been in a room and felt like something was missing? Perhaps it
-          felt slightly bare and uninviting. I’ve got some simple tips to help
-          you make any room feel complete.
+        <p className="text-desaturated-dark-blue mb-6">
+          Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.
         </p>
-        <div>
-          <img src="./images/avatar-michelle.jpg" alt="avatar michelle image" />
-          <div>
-            <span>Michelle Appleton</span>
-            <span>28 Jun 2020</span>
+        
+        <!-- Autor y botón de compartir -->
+        <div className="flex items-center justify-between">
+          <div id="author" className="flex items-center">
+            <img src="./images/avatar-michelle.jpg" alt="Michelle Appleton" title="Michelle Appleton" width="24" height="24" className="size-10 rounded-full" />
+            <div className="ml-4">
+              <p className="font-bold text-very-dark-grayish-blue">Michelle Appleton</p>
+              <p className="text-grayish-blue">28 Jun 2020</p>
+            </div>
           </div>
-          <button><img src="./images/icon-share.svg" alt="icon share"></button>
-          <nav>
-            <ul>
-              <li><span>SHARE</span></li>
-              <li><a target="_blank"><img src="./images/icon-facebook.svg" alt="icon facebook"></a></li>
-              <li><a target="_blank"><img src="./images/icon-twitter.svg" alt="icon twitter"></a></li>
-              <li><a target="_blank"><img src="./images/icon-pinterest.svg" alt="icon pinterest"></a></li>
-            </ul>
+          
+          <button className="bg-light-grayish-blue p-2 rounded-full hover:bg-desaturated-dark-blue hover:text-white transition-colors">
+            <img src="./images/icon-share.svg" alt="Share" title="Share" width="24" height="24" className="size-5" />
+          </button>
+
+          <!-- Menú de compartir -->
+          <nav id="share-menu" className="hidden absolute bottom-0 right-0 left-0 bg-very-dark-grayish-blue text-white p-4 md:absolute md:bottom-20 md:right-0 md:left-auto md:size-56 md:rounded-lg md:shadow-xl">
+            <div className="flex items-center">
+              <span className="uppercase tracking-wider text-grayish-blue text-sm mr-4">Share</span>
+              <div className="flex space-x-4">
+                <a href="#" id="facebook" className="hover:opacity-70 transition-opacity">
+                  <img src="./images/icon-facebook.svg" alt="Facebook" title="Facebook" width="24" height="24" className="size-6" />
+                </a>
+                <a href="#" id="twitter" className="hover:opacity-70 transition-opacity">
+                  <img src="./images/icon-twitter.svg" alt="Twitter" title="Twitter" width="24" height="24" className="size-6" />
+                </a>
+                <a href="#" id="pinterest" className="hover:opacity-70 transition-opacity">
+                  <img src="./images/icon-pinterest.svg" alt="Pinterest" title="Pinterest" width="24" height="24" className="size-6" />
+                </a>
+              </div>
+            </div>
           </nav>
         </div>
-      </section>
+      </div>
     </main>
     <script src="main.js"></script>
   </body>
